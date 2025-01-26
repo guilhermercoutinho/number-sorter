@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteador de Números</title>
+</head>
+
+<body>
+  <header class="header">
+    <img src="./assets/logo.png" alt="Logo do Sorteador" class="logo">
+    <h1>Sorteador de Números</h1>
+  </header>
+
+  <main class="container">
+    <section class="instructions">
+      <p>Insira um intervalo de números e clique em "Sortear" para obter um número aleatório.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="form-sorteador">
+        <!-- Vampo para número Mínimo -->
+        <div class="form-group">
+          <label for="min">Número mínimo:</label>
+          <input type="number" id="min" name="min" placeholder="EX.: 1" required>
+        </div>
+
+        <!-- Vampo para número Máximo -->
+        <div class="form-group">
+          <label for="max">Número máximo:</label>
+          <input type="number" id="max" name="max" placeholder="EX.: 100" required>
+        </div>
+
+        <button type="button" id="sorteador-btn">Sortear</button>
+      </form>
+    </section>
+
+    <!-- Área onde exibirá o número sorteado -->
+    <section id="resultado" aria-live="polite">
+      <p>00</p>
+    </section>
+
+    <section class="actions">
+      <button type="button" id="limpar-btn">Limpar</button>
+    </section>
+  </main>
+</body>
+
+</html>
