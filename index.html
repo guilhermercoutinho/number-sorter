@@ -1,54 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sorteador de Números</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Sorteador de Números</title>
-</head>
+  <body>
+    <header class="header">
+      <img src="./assets/logo.png" alt="Logo do Sorteador" class="logo" />
+    </header>
 
-<body>
-  <header class="header">
-    <img src="./assets/logo.png" alt="Logo do Sorteador" class="logo">
-  </header>
+    <main class="container">
+      <section class="instructions">
+        <p>
+          Insira um intervalo de números e clique em "Sortear" para obter um
+          número aleatório.
+        </p>
+      </section>
 
-  <main class="container">
-    <section class="instructions">
-      <p>Insira um intervalo de números e clique em "Sortear" para obter um número aleatório.</p>
-    </section>
+      <section class="form-section">
+        <form id="form-sorteador">
+          <!-- Vampo para número Mínimo -->
+          <div class="form-group">
+            <label for="min">Número mínimo:</label>
+            <input
+              type="number"
+              id="min"
+              name="min"
+              placeholder="Ex.: 1"
+              required
+            />
+          </div>
 
-    <section class="form-section">
-      <form id="form-sorteador">
-        <!-- Vampo para número Mínimo -->
-        <div class="form-group">
-          <label for="min">Número mínimo:</label>
-          <input type="number" id="min" name="min" placeholder="EX.: 1" required>
-        </div>
+          <!-- Vampo para número Máximo -->
+          <div class="form-group">
+            <label for="max">Número máximo:</label>
+            <input
+              type="number"
+              id="max"
+              name="max"
+              placeholder="Ex.: 100"
+              required
+            />
+          </div>
 
-        <!-- Vampo para número Máximo -->
-        <div class="form-group">
-          <label for="max">Número máximo:</label>
-          <input type="number" id="max" name="max" placeholder="EX.: 100" required>
-        </div>
+          <button type="button" id="sortear-btn">Sortear</button>
+        </form>
+      </section>
 
-        <button type="button" id="sorteador-btn">Sortear</button>
-      </form>
-    </section>
+      <!-- Área onde exibirá o número sorteado -->
+      <section id="resultado" aria-live="polite">
+        <!-- <p>00</p> -->
+      </section>
 
-    <!-- Área onde exibirá o número sorteado -->
-    <section id="resultado" aria-live="polite">
-      <!-- <p>00</p> -->
-    </section>
+      <section class="actions">
+        <button type="button" id="limpar-btn">Limpar</button>
+      </section>
+    </main>
 
-    <section class="actions">
-      <button type="button" id="limpar-btn">Limpar</button>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 Sorteador de Números - Desernvolvido por Guilherme Coutinho.</p>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <p>
+        &copy; 2025 Sorteador de Números - Desernvolvido por
+        <a
+          href="https://www.linkedin.com/in/guilherme-rcoutinho/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Guilherme Coutinho.</a
+        >
+      </p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
 </html>

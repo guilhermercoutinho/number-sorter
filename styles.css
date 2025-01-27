@@ -1,21 +1,22 @@
 :root {
-  --cor-fundo: #f9f9f9;
-  --cor-texto: #333333;
-  --cor-primaria: #FC2827;
-  --cor-secundaria: #ffffff;
-  --cor-botao-hover: #CD1718;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --primary-color: #fc2827;
+  --secondary-color: #ffffff;
+  --tertiary-color: #cd1718;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", serif;
 }
 
 body {
   height: 100vh;
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -30,7 +31,7 @@ body {
 
   img {
     width: 60%;
-    max-width: 300px;
+    max-width: 280px;
     object-fit: contain;
   }
 }
@@ -39,7 +40,7 @@ body {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: var(--cor-secundaria);
+  background-color: var(--secondary-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -49,7 +50,7 @@ body {
   text-align: center;
 
   p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
 }
@@ -73,10 +74,11 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
 
     &:focus {
       outline: none;
-      border-color: var(--cor-primaria);
+      border-color: var(--primary-color);
     }
   }
 }
@@ -90,8 +92,8 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-secundaria);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -99,7 +101,7 @@ button {
   margin: 0 auto;
 
   &:hover {
-    background-color: var(--cor-botao-hover);
+    background-color: var(--tertiary-color);
   }
 
   &:active {
@@ -116,10 +118,10 @@ button {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--cor-primaria);
+  color: var(--primary-color);
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px dashed var(--cor-primaria);
+  border: 1px dashed var(--primary-color);
   border-radius: 5px;
   min-height: 50px;
   display: flex;
@@ -129,13 +131,18 @@ button {
 
 .footer {
   text-align: center;
-  color: var(--cor-botao-hover);
+  color: var(--tertiary-color);
   padding: 1rem;
   font-size: 0.9rem;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   position: absolute;
   bottom: 0;
   width: 100%;
+
+  a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+  }
 }
 
 @media (max-width: 768px) {
